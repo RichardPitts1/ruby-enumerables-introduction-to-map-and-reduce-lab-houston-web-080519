@@ -24,19 +24,21 @@ def reduce_to_total(source_array, starting_point = 0)
 end
 reduce_to_total(funarray, 0)
 
-# #array = [nil, false, true]
-# def reduce_to_all_true(source_array)
-#   source_array.reduce(0) { |x| 
-#   if x == true
-#   return true 
-#   else 
-#   return false
-#   }
-# end
-# reduce_to_all_true(array)
-
+passed_in_array = [true, 2, true, true]
+passed_in_false_array = [false, true, true]
 
 def reduce_to_any_true(source_array)
-  
+  i = 0  
+  while i < source_array.length do 
+    if source_array[i] == true
+    i += 1
+    return true
+  else 
+    if source_array == false   
+      return false
+  end
 end
+
+reduce_to_any_true(passed_in_array)
+
 
